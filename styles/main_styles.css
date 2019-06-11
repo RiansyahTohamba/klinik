@@ -659,14 +659,14 @@ section
 .home_subtitle
 {
 	font-size: 30px;
-	color: #57ccc3;
+	color: #fffefe;
 	font-weight: 600;
 	line-height: 1.1;
 }
 .home_title
 {
 	font-size: 60px;
-	color: #404040;
+	color: #fffefe;
 	line-height: 1.2;
 	font-weight: 500;
 	margin-top: -2px;
@@ -674,6 +674,10 @@ section
 .home_text
 {
 	margin-top: 11px;
+}
+.home_text p
+{
+	color: #fffefe;
 }
 .home_buttons
 {
