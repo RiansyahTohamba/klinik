@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Klinik Puri</title>
+<title>Klinik Puri Intan Medika</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Dr PRO template project">
@@ -37,13 +37,24 @@
 			<!-- Main Navigation -->
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="#">Tentang Kami</a></li>
-					<li><a href="#pelayanan">Pelayanan</a></li>
-					<li><a href="#">Berita</a></li>
+					<li class="active" id=""><a href="index.php">Home</a></li>
+					<li><a href="#">Jadwal</a></li>
 					<li><a href="#">Kontak</a></li>
 				</ul>
 			</nav>
+			<!-- <nav class="address_responsive">
+				Jl KH Agus Salim, Bekasi Timur
+				(021) 8269 3888
+				+62 81945 110 773
+			</nav> -->
+			<!-- <nav class="main_nav_responsive">
+				<ul class="d-flex flex-row align-items-center justify-content-start">
+					<li class="active" id=""><a href="index.php">Home</a></li>
+					<li><a href="#">Jadwal</a></li>
+					<li><a href="#pelayanan">Layanan</a></li>
+					<li><a href="#">Kontak</a></li>
+				</ul>
+			</nav> -->
 			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
 				
 				<!-- Work Hourse -->
@@ -63,9 +74,6 @@
 						<li><a href="https://twitter.com/klinikpuriintan"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
-
-				<!-- Hamburger -->
-				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			</div>
 		</div>
 	</header>
@@ -153,8 +161,194 @@
 
 		</div>
 	</div>
+	<!-- Call to action -->
 
-	<!-- Intro -->
+	<div class="cta">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+						<div class="cta_content">
+							<div class="cta_title">Hubungi Kami</div>
+							<div class="cta_text">Jl KH Agus Salim, Bekasi Timur
+				</div>
+						</div>
+						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
+						<div class="cta_phone ml-lg-auto">+62 81945 110 773</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Why Choose Us -->
+
+	<div class="why">
+		<div class="background_image" style="background-image:url(images/why.jpg)"></div>
+		<div class="container">
+			<div class="row row-eq-height">
+
+				<!-- Why Choose Us Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="why_image_container">
+						<div class="why_image"><img src="images/why_1.jpg" alt=""></div>
+					</div>
+				</div>
+
+				<!-- Why Choose Us Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="why_content">
+						<div class="section_title_container">
+							<div class="section_title"><h2>Kenapa memilih kami?</h2></div>
+						</div>
+						<div class="why_text">
+							<p>Ada begitu banyak klinik tapi cuman klinik puri intan blabla . Duis feugiat bibendum orci, non elementum urna vestibulum in. Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus, vel pharetra metus dolor.</p>
+						</div>
+						<div class="why_list">
+							<ul>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
+										<div class="icon"><img src="images/icon_1.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
+									</div>
+									<div class="why_list_content">
+										<div class="why_list_title">Obat Terbaik</div>
+										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel ac nisl</div>
+									</div>
+								</li>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
+										<div class="icon"><img src="images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
+									</div>
+									<div class="why_list_content">
+										<div class="why_list_title">Dokter Terbaik di bidangnya</div>
+										<div class="why_list_text">Ac erat ut enim maximus accumsan vel ac</div>
+									</div>
+								</li>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
+										<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
+									</div>
+									<div class="why_list_content">
+										<div class="why_list_title">Respon cepat</div>
+										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Services -->
+
+	<div id="pelayanan" class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title_container">
+						
+						<div class="section_title"><h2>Pelayanan Kami</h2></div>
+						<?php 
+
+						$services = array(
+							'Umum'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Kebidanan'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Poli Gigi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Poli Laktasi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Pijat Bayi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Senam Hamil'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Home Care'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Poli Tumbuh Kembang'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
+							'Farmasi'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl'
+						);
+						?>
+					</div>
+				</div>
+			</div>
+			<div class="row services_row">
+				
+				<!-- Service -->
+				<?php foreach ($services as $key => $value) { ?>
+				<div class="col-xl-4 col-md-6 service_col">
+					<div class="service text-center">
+						<div class="service">
+							<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+								<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
+							</div>
+							<div class="service_title"><?php echo $key ?></div>
+							<div class="service_text">
+								<p><?php echo $value ?></p>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<?php } ?>
+				
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Extra -->
+
+	<div class="extra">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/extra.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="extra_container d-flex flex-row align-items-start justify-content-end">
+						<div class="extra_content">
+							<div class="extra_disc d-flex flex-row align-items-end justify-content-start">
+								<div>30<span>%</span></div>
+								<div>Discount</div>
+							</div>
+							<div class="extra_title">Only in August</div>
+							<div class="extra_text">
+								<p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus.</p>
+							</div>
+							<div class="button button_1 extra_link trans_200"><a href="#">read more</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="newsletter_title">Subscribe to our newsletter</div>
+				</div>
+			</div>
+			<div class="row newsletter_row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="newsletter_form_container">
+						<form action="#" id="newsleter_form" class="newsletter_form">
+							<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
+							<button class="newsletter_button">subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Make An Appointmen -->
 
 	<div class="intro">
 		<div class="container">
@@ -236,190 +430,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- Why Choose Us -->
-
-	<div class="why">
-		<div class="background_image" style="background-image:url(images/why.jpg)"></div>
-		<div class="container">
-			<div class="row row-eq-height">
-
-				<!-- Why Choose Us Image -->
-				<div class="col-lg-6 order-lg-1 order-2">
-					<div class="why_image_container">
-						<div class="why_image"><img src="images/why_1.jpg" alt=""></div>
-					</div>
-				</div>
-
-				<!-- Why Choose Us Content -->
-				<div class="col-lg-6 order-lg-2 order-1">
-					<div class="why_content">
-						<div class="section_title_container">
-							<div class="section_title"><h2>Kenapa memilih kami?</h2></div>
-						</div>
-						<div class="why_text">
-							<p>Ada begitu banyak klinik tapi cuman klinik puri intan blabla . Duis feugiat bibendum orci, non elementum urna vestibulum in. Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus, vel pharetra metus dolor.</p>
-						</div>
-						<div class="why_list">
-							<ul>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_1.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Obat Terbaik</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel ac nisl</div>
-									</div>
-								</li>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Dokter Terbaik di bidangnya</div>
-										<div class="why_list_text">Ac erat ut enim maximus accumsan vel ac</div>
-									</div>
-								</li>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Respon cepat</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel</div>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Call to action -->
-
-	<div class="cta">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-						<div class="cta_content">
-							<div class="cta_title">Segera buat janji hari ini!</div>
-							<div class="cta_text">Etiam ac erat ut enim maximus accumsan vel ac nisl</div>
-						</div>
-						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Services -->
-
-	<div id="pelayanan" class="services">
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="section_title_container">
-						
-						<div class="section_title"><h2>Pelayanan Kami</h2></div>
-						<?php 
-
-						$services = array(
-							'Umum'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Kebidanan'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Gigi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Laktasi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Pijat Bayi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Senam Hamil'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Home Care'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Tumbuh Kembang'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Farmasi'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl'
-						);
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="row services_row">
-				
-				<!-- Service -->
-				<?php foreach ($services as $key => $value) { ?>
-				<div class="col-xl-4 col-md-6 service_col">
-					<div class="service text-center">
-						<div class="service">
-							<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-								<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-							</div>
-							<div class="service_title"><?php echo $key ?></div>
-							<div class="service_text">
-								<p><?php echo $value ?></p>
-							</div>
-						</div>
-					</div>
-				</div>	
-				<?php } ?>
-				
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Extra -->
-
-	<div class="extra">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/extra.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="extra_container d-flex flex-row align-items-start justify-content-end">
-						<div class="extra_content">
-							<div class="extra_disc d-flex flex-row align-items-end justify-content-start">
-								<div>30<span>%</span></div>
-								<div>Discount</div>
-							</div>
-							<div class="extra_title">Only in August</div>
-							<div class="extra_text">
-								<p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus.</p>
-							</div>
-							<div class="button button_1 extra_link trans_200"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="newsletter_title">Subscribe to our newsletter</div>
-				</div>
-			</div>
-			<div class="row newsletter_row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_form_container">
-						<form action="#" id="newsleter_form" class="newsletter_form">
-							<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
-							<button class="newsletter_button">subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Footer -->
 
 	<footer class="footer">

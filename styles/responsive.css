@@ -27,6 +27,10 @@
 
 @media only screen and (max-width: 1840px)
 {
+	.main_nav_responsive
+	{
+		display: none
+	}
 	.main_nav
 	{
 	    margin-left: 143px;
@@ -130,7 +134,7 @@
 
 @media only screen and (max-width: 991px)
 {
-	.main_nav,
+	/*.main_nav,*/
 	.header_social
 	{
 		display: none;
@@ -244,13 +248,27 @@
 		margin-top: 15px;
 	}
 }
-
+/************
+11.iphone 
+************/
+@media only screen and (max-width: 670px)
+{
+	.main_nav ul li:not(:last-child)
+	{
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.main_nav ul li a {
+		font-size: 15px;
+	}
+}
 /************
 11. 575px
 ************/
 
 @media only screen and (max-width: 575px)
 {
+
 	p
 	{
 		font-size: 13px;
@@ -385,7 +403,10 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+	.main_nav
+	{
+	    margin-left: 0px;
+	}	
 }
 
 /************
@@ -414,3 +435,4 @@
 {
 	
 }
+
