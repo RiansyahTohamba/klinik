@@ -170,7 +170,7 @@
 					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
 						<div class="cta_content">
 							<div class="cta_title">Hubungi Kami</div>
-							<div class="cta_text">Jl KH Agus Salim, Bekasi Timur
+							<div class="cta_text">Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
 				</div>
 						</div>
 						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
@@ -199,9 +199,6 @@
 					<div class="why_content">
 						<div class="section_title_container">
 							<div class="section_title"><h2>Kenapa memilih kami?</h2></div>
-						</div>
-						<div class="why_text">
-							<p>Ada begitu banyak klinik tapi cuman klinik puri intan blabla . Duis feugiat bibendum orci, non elementum urna vestibulum in. Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus, vel pharetra metus dolor.</p>
 						</div>
 						<div class="why_list">
 							<ul>
@@ -314,9 +311,10 @@
 								<div>30<span>%</span></div>
 								<div>Discount</div>
 							</div>
-							<div class="extra_title">Only in August</div>
+							<!-- Pakai API instagram -->
+							<div class="extra_title">Promosi</div>
 							<div class="extra_text">
-								<p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus.</p>
+								<p>Dari instagram</p>
 							</div>
 							<div class="button button_1 extra_link trans_200"><a href="#">read more</a></div>
 						</div>
@@ -326,131 +324,12 @@
 		</div>
 	</div>
 
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="newsletter_title">Subscribe to our newsletter</div>
-				</div>
-			</div>
-			<div class="row newsletter_row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_form_container">
-						<form action="#" id="newsleter_form" class="newsletter_form">
-							<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
-							<button class="newsletter_button">subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- Make An Appointmen -->
-
-	<div class="intro">
-		<div class="container">
-			<div class="row">
-
-				<!-- Intro Content -->
-				<div class="col-lg-6 intro_col">
-					<div class="intro_content">
-						<div class="section_title_container">
-							<div class="section_title"><h2>Selamat Datang Ke Klinik Kami</h2></div>
-						</div>
-						<div class="intro_text">
-							<p>Integer aliquet congue libero, eu gravida odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna vestibulum in. Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus, vel pharetra metus dolor.</p>
-						</div>
-						<div class="milestones">
-							<div class="row milestones_row">
-							
-								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
-										<div class="milestone_text">Satisfied Patients</div>
-									</div>
-								</div>
-
-								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="352">0</div>
-										<div class="milestone_text">Face Liftings</div>
-									</div>
-								</div>
-
-								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="718">0</div>
-										<div class="milestone_text">Injectibles</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Intro Form -->
-				<div class="col-lg-6 intro_col">
-					<div class="intro_form_container">
-						<div class="intro_form_title">Buat Janji</div>
-						<form action="#" class="intro_form" id="intro_form">
-							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-								<input type="text" class="intro_input" placeholder="Your Name" required="required">
-								<input type="email" class="intro_input" placeholder="Your E-mail" required="required">
-								<input type="tel" class="intro_input" placeholder="Your Phone" required="required">
-								<select class="intro_select intro_input" required>
-									<option disabled="" selected="" value="">Speciality</option>
-									<option>Speciality 1</option>
-									<option>Speciality 2</option>
-									<option>Speciality 3</option>
-									<option>Speciality 4</option>
-									<option>Speciality 5</option>
-								</select>
-								<select class="intro_select intro_input" required="required">
-										<option disabled="" selected="" value="">Doctor</option>
-										<option>Doctor 1</option>
-										<option>Doctor 2</option>
-										<option>Doctor 3</option>
-										<option>Doctor 4</option>
-										<option>Doctor 5</option>
-									</select>
-								<input type="text" id="datepicker" class="intro_input datepicker" placeholder="Date" required="required">
-							</div>
-							<button class="button button_1 intro_button trans_200">Buat Janji</button>
-						</form>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 	<!-- Footer -->
 
 	<footer class="footer">
 		<div class="footer_content">
 			<div class="container">
 				<div class="row">
-
-					<!-- Footer About -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_about">
-							<div class="footer_logo">
-								<a href="#">
-									<div>Dr<span>PRO</span></div>
-									<div>Plastic Surgery</div>
-								</a>
-							</div>
-							<div class="footer_about_text">
-								<p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci eleme ntum eleifend tempor, nunc libero porttitor tellus.</p>
-							</div>
-						</div>
-					</div>
 
 					<!-- Footer Contact Info -->
 					<div class="col-lg-3 footer_col">
