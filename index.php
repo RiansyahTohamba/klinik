@@ -1,446 +1,315 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Klinik Puri Intan Medika</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Dr PRO template project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-</head>
-<body>
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-<div class="super_container">
-	
-	<!-- Header -->
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-	<header class="header trans_400">
-		<div class="header_content d-flex flex-row align-items-center jusity-content-start trans_400">
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-			<!-- Logo -->
-			<div class="logo">
-				<a href="#">
-					<!-- <div>Dr<span>PRO</span></div>
-					<div>Plastic Surgery</div> -->
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-					<img src="images/logo.png" style="width: 100px">
-				</a>
-			</div>
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-			<!-- Main Navigation -->
-			<nav class="main_nav">
-				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active" id=""><a href="index.php">Home</a></li>
-					<li><a href="#">Jadwal</a></li>
-					<li><a href="#">Kontak</a></li>
-				</ul>
-			</nav>
-			<!-- <nav class="address_responsive">
-				Jl KH Agus Salim, Bekasi Timur
-				(021) 8269 3888
-				+62 81945 110 773
-			</nav> -->
-			<!-- <nav class="main_nav_responsive">
-				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active" id=""><a href="index.php">Home</a></li>
-					<li><a href="#">Jadwal</a></li>
-					<li><a href="#pelayanan">Layanan</a></li>
-					<li><a href="#">Kontak</a></li>
-				</ul>
-			</nav> -->
-			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
-				
-				<!-- Work Hourse -->
-				<div class="work_hours">Senin - Minggu: 8:00  - 22:00 </div>
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-				<!-- Header Phone -->
-				<div class="header_phone">(021) 8269 3888</div>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-				<!-- Appointment Button -->
-				<div class="button button_1 header_button"><a href="#">Buat Janji</a></div>
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
-				<!-- Header Social -->
-				<div class="social header_social">
-					<ul class="d-flex flex-row align-items-center justify-content-start">
-						<li><a href="https://www.instagram.com/klinikpuriintan/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						<li><a href="https://web.facebook.com/KlinikPuriIntan/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="https://twitter.com/klinikpuriintan"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</header>
 
-	<!-- Menu -->
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-	<div class="menu_overlay trans_400"></div>
-	<div class="menu trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<nav class="menu_nav">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="menu_extra">
-			<div class="menu_link">Mo - Sat: 8:00am - 9:00pm</div>
-			<div class="menu_link">(021) 8269 3888</div>
-			<div class="menu_link"><a href="#">Buat Janji</a></div>
-		</div>
-		<div class="social menu_social">
-			<ul class="d-flex flex-row align-items-center justify-content-start">
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</div>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-	<!-- Home -->
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-	<div class="home">
 
-		<!-- Home Slider -->
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slide -->
-				<?php 
-				$slides = array(
-					'home_slider.jpg'=> '',
-					'front_office.jpeg'=> '',
-					'blog_1.jpg'=> ''
-				);
-
-				foreach ($slides as $key => $value) {
-					
-					?>
-					<div class="owl-item">
-						<div class="background_image" style="background-image:url(images/<?php echo $key ?>)"></div>
-						<div class="home_container">
-							<div class="container">
-								<div class="row">
-									<div class="col">
-										<div class="home_content">
-											<div class="home_subtitle">#1 Klinik Terbaik </div>
-											<div class="home_title">Kesehatan anda prioritas kami</div>
-											<div class="home_text">
-												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
-											</div>
-											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div class="button button_1 trans_200"><a href="#">Buat Janji</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-			<?php } ?>
-			</div>
-
-			<!-- Home Slider Dots -->
-
-			<div class="home_slider_dots">
-				<ul id="home_slider_custom_dots" class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-start">
-					<li class="home_slider_custom_dot trans_200 active"></li>
-					<li class="home_slider_custom_dot trans_200"></li>
-					<li class="home_slider_custom_dot trans_200"></li>
-				</ul>
-			</div>
-
-		</div>
-	</div>
-	<!-- Call to action -->
-
-	<div class="cta">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-						<div class="cta_content">
-							<div class="cta_title">Hubungi Kami</div>
-							<div class="cta_text">Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
-				</div>
-						</div>
-						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
-						<div class="cta_phone ml-lg-auto">+62 81945 110 773</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Why Choose Us -->
-
-	<div class="why">
-		<div class="background_image" style="background-image:url(images/why.jpg)"></div>
-		<div class="container">
-			<div class="row row-eq-height">
-
-				<!-- Why Choose Us Image -->
-				<div class="col-lg-6 order-lg-1 order-2">
-					<div class="why_image_container">
-						<div class="why_image"><img src="images/why_1.jpg" alt=""></div>
-					</div>
-				</div>
-
-				<!-- Why Choose Us Content -->
-				<div class="col-lg-6 order-lg-2 order-1">
-					<div class="why_content">
-						<div class="section_title_container">
-							<div class="section_title"><h2>Kenapa memilih kami?</h2></div>
-						</div>
-						<div class="why_list">
-							<ul>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_1.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Obat Terbaik</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel ac nisl</div>
-									</div>
-								</li>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Dokter Terbaik di bidangnya</div>
-										<div class="why_list_text">Ac erat ut enim maximus accumsan vel ac</div>
-									</div>
-								</li>
-
-								<!-- Why List Item -->
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center">
-										<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="why_list_content">
-										<div class="why_list_title">Respon cepat</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel</div>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-
-	<!-- Services -->
-
-	<div id="pelayanan" class="services">
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="section_title_container">
-						
-						<div class="section_title"><h2>Pelayanan Kami</h2></div>
-						<?php 
-
-						$services = array(
-							'Umum'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Kebidanan'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Gigi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Laktasi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Pijat Bayi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Senam Hamil'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Home Care'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Tumbuh Kembang'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Farmasi'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl'
-						);
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="row services_row">
-				
-				<!-- Service -->
-				<?php foreach ($services as $key => $value) { ?>
-				<div class="col-xl-4 col-md-6 service_col">
-					<div class="service text-center">
-						<div class="service">
-							<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-								<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-							</div>
-							<div class="service_title"><?php echo $key ?></div>
-							<div class="service_text">
-								<p><?php echo $value ?></p>
-							</div>
-						</div>
-					</div>
-				</div>	
-				<?php } ?>
-				
-
-			</div>
-		</div>
-	</div>
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-	<!-- Extra -->
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-	<div class="extra">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/extra.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="extra_container d-flex flex-row align-items-start justify-content-end">
-						<div class="extra_content">
-							<div class="extra_disc d-flex flex-row align-items-end justify-content-start">
-								<div>30<span>%</span></div>
-								<div>Discount</div>
-							</div>
-							<!-- Pakai API instagram -->
-							<div class="extra_title">Promosi</div>
-							<div class="extra_text">
-								<p>Dari instagram</p>
-							</div>
-							<div class="button button_1 extra_link trans_200"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-	<!-- Footer -->
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
 
-	<footer class="footer">
-		<div class="footer_content">
-			<div class="container">
-				<div class="row">
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
-					<!-- Footer Contact Info -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_contact">
-							<div class="footer_title">Contact Info</div>
-							<ul class="contact_list">
-								<li>+53 345 7953 32453</li>
-								<li>yourmail@gmail.com</li>
-								<li>contact@gmail.com</li>
-							</ul>
-						</div>
-					</div>
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-					<!-- Footer Locations -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_location">
-							<div class="footer_title">Our Locations</div>
-							<ul class="locations_list">
-								<li>
-									<div class="location_title">Miami</div>
-									<div class="location_text">45 Creekside Av  FL 931</div>
-								</li>
-								<li>
-									<div class="location_title">Los Angeles</div>
-									<div class="location_text">1481 Creekside Lane Avila Beach, CA 931</div>
-								</li>
-							</ul>
-						</div>
-					</div>
+	// Path to the system directory
+	define('BASEPATH', $system_path);
 
-					<!-- Footer Opening Hours -->
-					<div class="col-lg-3 footer_col">
-						<div class="opening_hours">
-							<div class="footer_title">Opening Hours</div>
-							<ul class="opening_hours_list">
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Monday:</div>
-									<div class="ml-auto">8:00am - 9:00pm</div>
-								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Thuesday:</div>
-									<div class="ml-auto">8:00am - 9:00pm</div>
-								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Wednesday:</div>
-									<div class="ml-auto">8:00am - 9:00pm</div>
-								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Thursday:</div>
-									<div class="ml-auto">8:00am - 9:00pm</div>
-								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Friday:</div>
-									<div class="ml-auto">8:00am - 7:00pm</div>
-								</li>
-							</ul>
-						</div>
-					</div>
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
-				</div>
-			</div>
-		</div>
-		<div class="footer_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
-							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</div>
-							<nav class="footer_nav ml-md-auto">
-								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">News</a></li>
-									<li><a href="#">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</div>
-	</footer>
-</div>
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap-4.1.2/popper.js"></script>
-<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
-<script src="js/custom.js"></script>
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
 
-  gtag('config', 'UA-23581568-13');
-</script>
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
 
-</body>
-</html>
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
