@@ -77,7 +77,7 @@
 				</div>
 						</div>
 						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
-						<div class="cta_phone ml-lg-auto">+62 81945 110 773</div>
+						<div class="cta_phone ml-lg-auto"><i class="fa fa-whatsapp" aria-hidden="true"></i> +62 81945 110 773</div>
 					</div>
 				</div>
 			</div>

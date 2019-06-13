@@ -66,39 +66,14 @@
 						<li><a href="https://www.instagram.com/klinikpuriintan/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						<li><a href="https://web.facebook.com/KlinikPuriIntan/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="https://twitter.com/klinikpuriintan"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="{{base_url()}}#contact"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<!-- Menu -->
-
-	<div class="menu_overlay trans_400"></div>
-	<div class="menu trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<nav class="menu_nav">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="menu_extra">
-			<div class="menu_link">Mo - Sat: 8:00am - 9:00pm</div>
-			<div class="menu_link">(021) 8269 3888</div>
-			<div class="menu_link"><a href="{{base_url()}}#our_services">Layanan Kami</a></div>
-		</div>
-		<div class="social menu_social">
-			<ul class="d-flex flex-row align-items-center justify-content-start">
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</div>
+	
 
 @yield('content')
 
@@ -114,7 +89,7 @@
 					<div class="col-lg-3 footer_col">
 						<div class="footer_contact">
 							<div class="footer_title">Kontak</div>
-							<ul class="contact_list">
+							<ul id="our_contact" class="contact_list">
 								<li>(021) 8269 3888</li>
 								<li>+62 81945 110 773</li>
 								<li>admin@klinikpuriintan.com</li>
