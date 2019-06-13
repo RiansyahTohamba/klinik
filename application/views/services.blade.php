@@ -1,263 +1,158 @@
 
-<!-- Home -->
+  <!-- Page Content -->
+  <div class="container">
 
-<div class="home d-flex flex-column align-items-start justify-content-end">
-	<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/#" data-speed="0.8"></div>
-	<div class="home_overlay"><img src="images/home_overlay.png" alt=""></div>
-	<div class="home_container">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_content">
-						<div class="home_title">Services</div>
-						<div class="home_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="row">
 
-<!-- Services -->
+      <div class="col-lg-3">
 
-<div class="services">
-	<div class="container">
-		<div class="row">
-			<div class="col text-center">
-				<div class="section_title_container">
-					<div class="section_subtitle">This is Dr Pro</div>
-					<div class="section_title"><h2>Our Services</h2></div>
-				</div>
-			</div>
-		</div>
-		<div class="row services_row">
-			
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_4.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+        <h1 class="my-4">Shop Name</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Category 1</a>
+          <a href="#" class="list-group-item">Category 2</a>
+          <a href="#" class="list-group-item">Category 3</a>
+        </div>
 
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_5.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+      </div>
+      <!-- /.col-lg-3 -->
 
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_6.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="col-lg-9">
 
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_7.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_8.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+        <div class="row">
 
-			<!-- Service -->
-			<div class="col-xl-4 col-md-6 service_col">
-				<div class="service text-center">
-					<div class="service">
-						<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-							<div class="icon"><img src="images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-						</div>
-						<div class="service_title">Breast Augmentation</div>
-						<div class="service_text">
-							<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-		</div>
-	</div>
-</div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-<!-- Before and After -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Three</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-<div class="before_and_after">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="section_title_container text-center">
-					<div class="section_subtitle">This is Dr Pro</div>
-					<div class="section_title"><h2>Before & After Gallery</h2></div>
-				</div>
-			</div>
-		</div>
-		<div class="row before_and_after_row">
-			<div class="col">
-				<div class="ba_container">
-					<figure class="cd-image-container">
-						<img src="images/before.jpg" alt="Original Image">
-						<span class="cd-image-label" data-type="original"></span>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Four</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-						<div class="cd-resize-img">
-							<img src="images/after.jpg" alt="Modified Image">
-							<span class="cd-image-label" data-type="modified"></span>
-						</div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Five</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-						<span class="cd-handle"></span>
-					</figure>
-				</div>
-				<div class="ba_text text-center"><p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus.</p></div>
-				<div class="ba_button_container text-center">
-					<div class="button button_1 ba_button"><a href="#">see gallery</a></div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Six</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
 
-<!-- Prices -->
+        </div>
+        <!-- /.row -->
 
-<div class="prices">
-	<div class="container">
-		<div class="row">
-			
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Breast Augmentation</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $3500</div>
-				</div>
-			</div>
+      </div>
+      <!-- /.col-lg-9 -->
 
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Otoplasty</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $2000</div>
-				</div>
-			</div>
+    </div>
+    <!-- /.row -->
 
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Eyelid Surgery</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $1500</div>
-				</div>
-			</div>
-
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Botox</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $200</div>
-				</div>
-			</div>
-
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Liposuction</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $5500</div>
-				</div>
-			</div>
-
-			<!-- Price -->
-			<div class="col-lg-6 price_col">
-				<div class="price">
-					<div class="price_title">Hyaluronic Acid</div>
-					<div class="price_text">
-						<p>Integer aliquet congue libero, eu gravida odio ultrces ut. Etiam ac erat ut enim maximus accumsan vel ac nisl.</p>
-					</div>
-					<div class="price_panel">From $350</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-<!-- Newsletter -->
-
-<div class="newsletter">
-	<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col text-center">
-				<div class="newsletter_title">Subscribe to our newsletter</div>
-			</div>
-		</div>
-		<div class="row newsletter_row">
-			<div class="col-lg-8 offset-lg-2">
-				<div class="newsletter_form_container">
-					<form action="#" id="newsleter_form" class="newsletter_form">
-						<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
-						<button class="newsletter_button">subscribe</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+  </div>
+  <!-- /.container -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
