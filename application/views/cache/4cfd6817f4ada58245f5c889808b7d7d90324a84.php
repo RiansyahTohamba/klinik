@@ -46,9 +46,9 @@
 			<!-- Main Navigation -->
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active" id=""><a href="index.php">Home</a></li>
+					<li class="active" id=""><a href="<?php echo e(base_url()); ?>">Beranda</a></li>
 					<li><a href="#">| Jadwal</a></li>
-					<li><a href="#">| Kontak</a></li>
+					<li><a href="<?php echo e(base_url()); ?>#contact">| Kontak</a></li>
 				</ul>
 			</nav>
 			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
@@ -56,11 +56,9 @@
 				<!-- Work Hourse -->
 				<div class="work_hours">Senin - Minggu: 8:00  - 22:00 </div>
 
-				<!-- Header Phone -->
-				<div class="header_phone">(021) 8269 3888</div>
 
 				<!-- Appointment Button -->
-				<div class="button button_1 header_button"><a href="#">Layanan Kami</a></div>
+				<div class="button button_1 header_button"><a href="<?php echo e(base_url()); ?>#our_services">Layanan Kami</a></div>
 
 				<!-- Header Social -->
 				<div class="social header_social">
@@ -91,7 +89,7 @@
 		<div class="menu_extra">
 			<div class="menu_link">Mo - Sat: 8:00am - 9:00pm</div>
 			<div class="menu_link">(021) 8269 3888</div>
-			<div class="menu_link"><a href="#">Layanan Kami</a></div>
+			<div class="menu_link"><a href="<?php echo e(base_url()); ?>#our_services">Layanan Kami</a></div>
 		</div>
 		<div class="social menu_social">
 			<ul class="d-flex flex-row align-items-center justify-content-start">
@@ -115,11 +113,11 @@
 					<!-- Footer Contact Info -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_contact">
-							<div class="footer_title">Contact Info</div>
+							<div class="footer_title">Kontak</div>
 							<ul class="contact_list">
-								<li>+53 345 7953 32453</li>
-								<li>yourmail@gmail.com</li>
-								<li>contact@gmail.com</li>
+								<li>(021) 8269 3888</li>
+								<li>+62 81945 110 773</li>
+								<li>admin@klinikpuriintan.com</li>
 							</ul>
 						</div>
 					</div>
@@ -127,15 +125,11 @@
 					<!-- Footer Locations -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_location">
-							<div class="footer_title">Our Locations</div>
+							<div class="footer_title">Alamat :</div>
 							<ul class="locations_list">
 								<li>
-									<div class="location_title">Miami</div>
-									<div class="location_text">45 Creekside Av  FL 931</div>
-								</li>
-								<li>
-									<div class="location_title">Los Angeles</div>
-									<div class="location_text">1481 Creekside Lane Avila Beach, CA 931</div>
+									<div class="location_title">Bekasi Timur, Jawa Barat</div>
+									<div class="location_text">Jl KH Agus Salim (Tugu) No 35</div>
 								</li>
 							</ul>
 						</div>
@@ -144,26 +138,26 @@
 					<!-- Footer Opening Hours -->
 					<div class="col-lg-3 footer_col">
 						<div class="opening_hours">
-							<div class="footer_title">Opening Hours</div>
+							<div class="footer_title">Jam Buka</div>
 							<ul class="opening_hours_list">
 								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Monday:</div>
+									<div>Senin:</div>
 									<div class="ml-auto">8:00am - 9:00pm</div>
 								</li>
 								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Thuesday:</div>
+									<div>Selasa:</div>
 									<div class="ml-auto">8:00am - 9:00pm</div>
 								</li>
 								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Wednesday:</div>
+									<div>Rabu:</div>
 									<div class="ml-auto">8:00am - 9:00pm</div>
 								</li>
 								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Thursday:</div>
+									<div>Kamis:</div>
 									<div class="ml-auto">8:00am - 9:00pm</div>
 								</li>
 								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Friday:</div>
+									<div>Jumat:</div>
 									<div class="ml-auto">8:00am - 7:00pm</div>
 								</li>
 							</ul>
@@ -181,15 +175,6 @@
 							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 							</div>
-							<nav class="footer_nav ml-md-auto">
-								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">News</a></li>
-									<li><a href="#">Contact</a></li>
-								</ul>
-							</nav>
 						</div>
 					</div>
 				</div>

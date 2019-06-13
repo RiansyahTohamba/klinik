@@ -3,6 +3,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/animate.css">
+    <link href="<?php echo e(asset_url()); ?>styles/google_map.css" rel='stylesheet' type='text/css'>
+
 	<script src="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 	
 	<!-- Home -->
@@ -37,7 +39,7 @@
 												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
 											</div>
 											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div class="button button_1 trans_200"><a href="#">Layanan Kami</a></div>
+												<div class="button button_1 trans_200"><a href="<?php echo e(base_url()); ?>#our_services">Layanan Kami</a></div>
 											</div>
 										</div>
 									</div>
@@ -50,7 +52,7 @@
 
 			<!-- Home Slider Dots -->
 
-			<div class="home_slider_dots">
+			<div id="contact" class="home_slider_dots">
 				<ul id="home_slider_custom_dots" class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-start">
 					<li class="home_slider_custom_dot trans_200 active"></li>
 					<li class="home_slider_custom_dot trans_200"></li>
@@ -62,7 +64,7 @@
 	</div>
 	<!-- Call to action -->
 
-	<div class="cta">
+	<div  class="cta">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -82,14 +84,14 @@
 	<!-- Why Choose Us -->
 
 	<div class="why">
-		<div class="background_image" style="background-image:url(<?php echo e(asset_url()); ?>images/why.jpg)"></div>
+		<div class="background_image" style=""></div>
 		<div class="container">
 			<div class="row row-eq-height">
 
 				<!-- Why Choose Us Image -->
 				<div class="col-lg-6 order-lg-1 order-2">
 					<div class="why_image_container">
-						<div class="why_image"><img src="<?php echo e(asset_url()); ?>images/why_1.jpg" alt=""></div>
+						<div class="why_image"><img src="<?php echo e(asset_url()); ?>images/obat.jpeg" alt="" style="height: 600px"></div>
 					</div>
 				</div>
 
@@ -143,10 +145,9 @@
 		</div>
 	</div>
 
-
 	<!-- Services -->
 
-	<div id="pelayanan" class="services">
+	<div id="our_services" class="services">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
@@ -173,11 +174,11 @@
 			<div class="row services_row">
 				
 				<!-- Service -->
-				<?php foreach ($services as $key => $value) { ?>
+				<?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					
 						<div class="col-xl-4 col-md-6 service_col">
 							<div class="service text-center">
-								<a href="services.php">
+								<a href="<?php echo e(base_url()); ?>index.php/services">
 								<div class="service">
 									<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
 										<div class="icon"><img src="<?php echo e(asset_url()); ?>images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
@@ -190,7 +191,7 @@
 								</a>
 							</div>
 						</div>	
-				<?php } ?>
+				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 				
 
 			</div>
@@ -198,31 +199,45 @@
 	</div>
 
 
-	<!-- Extra -->
+	<!-- Visit Us -->
 
-	<div class="extra">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-speed="0.8"></div>
+	<div id="our_services" class="services">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<div class="extra_container d-flex flex-row align-items-start justify-content-end">
-						<div class="extra_content">
-							<div class="extra_disc d-flex flex-row align-items-end justify-content-start">
-								<div>30<span>%</span></div>
-								<div>Discount</div>
-							</div>
-							<!-- Pakai API instagram -->
-							<div class="extra_title">Promosi</div>
-							<div class="extra_text">
-								<p>Ambil Gambar Dari instagram</p>
-							</div>
-						</div>
+				<div class="col text-center">
+					<div class="section_title_container">
+						
+						<div class="section_title"><h2>Kunjungi Kami</h2></div>
+					</div>
+					<div class="row services_row">
+						<div id="map"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- Article -->
 
+	<div id="our_services" class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title_container">
+						
+						<div class="section_title"><h2>Artikel</h2></div>
+					</div>
+					<div class="row services_row">
+						<p>dari instagram</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<input type="hidden" id="marker_url" value="<?php echo e(asset_url()); ?>/images/marker.png">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+<script src="<?php echo e(asset_url()); ?>js/google_map.js"></script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/klinikpuri/application/views/index.blade.php ENDPATH**/ ?>
