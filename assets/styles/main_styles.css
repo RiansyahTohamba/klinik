@@ -656,6 +656,9 @@ section
 {
 	max-width: 550px;
 }
+.home_subtitle,.home_title,.home_text{
+	background-color:rgba(0, 0, 0, 0.5);
+}
 .home_subtitle
 {
 	font-size: 30px;
@@ -669,7 +672,7 @@ section
 	color: #fffefe;
 	line-height: 1.2;
 	font-weight: 500;
-	margin-top: -2px;
+	margin-top: 0px;
 }
 .home_text
 {
