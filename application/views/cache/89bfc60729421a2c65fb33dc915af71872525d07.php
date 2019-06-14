@@ -18,8 +18,8 @@
 				<!-- Slide -->
 				<?php 
 				$slides = array(
-					'front_office.jpeg'=> '',
 					'home_slider.jpg'=> '',
+					'front_office.jpeg'=> '',
 					'blog_1.jpg'=> ''
 				);
 
@@ -207,7 +207,7 @@
 						<div class="section_title"><h2>Kunjungi Kami</h2></div>
 					</div>
 					<div class="row services_row">
-						<div id="map"></div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.74882314722!2d107.00499961671271!3d-6.239039875109695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf96a031f9c798501!2sKlinik+Puri+Intan!5e0!3m2!1sen!2sid!4v1560491998345!5m2!1sen!2sid" width="100%" height="350px" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -238,7 +238,6 @@
 	
 
 <input type="hidden" id="marker_url" value="<?php echo e(asset_url()); ?>/images/marker.png">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-<script src="<?php echo e(asset_url()); ?>js/google_map.js"></script>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/klinikpuri/application/views/index.blade.php ENDPATH**/ ?>
