@@ -8,7 +8,7 @@ if (!function_exists('view')) {
 	}
 }
 
-if ( ! function_exists('asset_url()'))
+if ( ! function_exists('asset_url'))
 {
 	function asset_url()
 	{
