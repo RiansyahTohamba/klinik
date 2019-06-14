@@ -2,7 +2,7 @@
 @section('content')
 
   <!-- Page Content -->
-  <div class="container" style="padding-top: 120px; margin-left: 120px">
+  <div class="container" style="padding-top: 120px;">
 
     <div class="row">
 
@@ -52,14 +52,11 @@
 
         <div class="row">
 
-          <div class="col-lg-8 col-md-6 mb-4">
             <div class="card h-100">
               <div class="card-body">
                 <p class="card-text">Pelayanan Kebidanan memberikanmu blablablabla blablabla blabla blablabla blablabla blablabla  blablabla blablabla blablabla  blablabla blablabla blablabla  blablabla blablabla blablabla  blablabla blablabla blablabla </p>
               </div>
             </div>
-          </div>
-
 
         </div>
         <!-- /.row -->
@@ -71,6 +68,7 @@
     <!-- /.row -->
 
   </div>
+  <br>
   <!-- /.container -->
   <script src="{{asset_url()}}/js/bootstrap.bundle.min.js"></script>
 @endsection

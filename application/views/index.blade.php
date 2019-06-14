@@ -20,8 +20,8 @@
 				<!-- Slide -->
 				<?php 
 				$slides = array(
-					'home_slider.jpg'=> '',
 					'front_office.jpeg'=> '',
+					'home_slider.jpg'=> '',
 					'blog_1.jpg'=> ''
 				);
 
@@ -113,7 +113,6 @@
 									</div>
 									<div class="why_list_content">
 										<div class="why_list_title">Obat Terbaik</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel ac nisl</div>
 									</div>
 								</li>
 
@@ -124,7 +123,6 @@
 									</div>
 									<div class="why_list_content">
 										<div class="why_list_title">Dokter Terbaik di bidangnya</div>
-										<div class="why_list_text">Ac erat ut enim maximus accumsan vel ac</div>
 									</div>
 								</li>
 
@@ -135,7 +133,6 @@
 									</div>
 									<div class="why_list_content">
 										<div class="why_list_title">Respon cepat</div>
-										<div class="why_list_text">Etiam ac erat ut enim maximus accumsan vel</div>
 									</div>
 								</li>
 
@@ -227,10 +224,14 @@
 				<div class="col text-center">
 					<div class="section_title_container">
 						
-						<div class="section_title"><h2>Artikel</h2></div>
+						<div class ="section_title"><h2>Update Terkini</h2></div>
 					</div>
 					<div class="row services_row">
-						<p>dari instagram</p>
+						<div class="ig-thumbnail">
+							@foreach ($data['photos'] as $photo)
+								<a href="https://www.instagram.com/klinikpuriintan/"><img src="{{$photo}}" class="img-thumbnail" width="350" style="margin-left: 20px"> </a>
+							@endforeach
+						</div>
 					</div>
 				</div>
 			</div>
