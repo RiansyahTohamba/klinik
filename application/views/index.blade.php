@@ -156,15 +156,15 @@
 						<?php 
 
 						$services = array(
-							'Umum'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Kebidanan'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Gigi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Laktasi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Pijat Bayi'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Senam Hamil'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Home Care'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Poli Tumbuh Kembang'=>'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl',
-							'Farmasi'=> 'Poli umum kami siap melayani keluhan Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl'
+							'Umum',
+							'Kebidanan',
+							'Poli Gigi',
+							'Poli Laktasi',
+							'Pijat Bayi',
+							'Senam Hamil',
+							'Home Care',
+							'Poli Tumbuh Kembang',
+							'Farmasi',
 						);
 						?>
 					</div>
@@ -173,7 +173,7 @@
 			<div class="row services_row">
 				
 				<!-- Service -->
-				@foreach ($services as $key => $value)
+				@foreach ($services as $key)
 					
 						<div class="col-xl-4 col-md-6 service_col">
 							<div class="service text-center">
@@ -183,9 +183,7 @@
 										<div class="icon"><img src="{{ asset_url() }}images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
 									</div>
 									<div class="service_title"><?php echo $key ?></div>
-									<div class="service_text">
-										<p><?php echo $value ?></p>
-									</div>
+									
 								</div>
 								</a>
 							</div>

@@ -47,7 +47,7 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active" id=""><a href="{{base_url()}}">Beranda</a></li>
-					<li><a href="#">| Jadwal</a></li>
+					<li><a href="{{base_url()}}#our_services">| Jadwal</a></li>
 					<li><a href="{{base_url()}}#contact">| Kontak</a></li>
 				</ul>
 			</nav>
