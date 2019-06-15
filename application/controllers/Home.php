@@ -13,9 +13,10 @@ class Home extends CI_Controller {
 		foreach ($results['data'] as $photo){
 			$photos[]= $photo['images']['standard_resolution']['url'];
 		}
-		// $services = $this->db->query("SELECT * FROM klinikpuri.services");
+		$services = $this->db->query("SELECT * FROM services");
 		$data = array(
-			'photos' => $photos
+			'photos' => $photos,
+			'services' => $services,
 		);
 		return view('index',['data'=>$data]);
 	}

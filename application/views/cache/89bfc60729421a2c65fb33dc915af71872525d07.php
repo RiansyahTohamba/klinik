@@ -151,36 +151,23 @@
 					<div class="section_title_container">
 						
 						<div class="section_title"><h2>Pelayanan Kami</h2></div>
-						<?php 
-
-						$services = array(
-							'Umum',
-							'Kebidanan',
-							'Poli Gigi',
-							'Poli Laktasi',
-							'Pijat Bayi',
-							'Senam Hamil',
-							'Home Care',
-							'Poli Tumbuh Kembang',
-							'Farmasi',
-						);
-						?>
+						
 					</div>
 				</div>
 			</div>
 			<div class="row services_row">
 				
 				<!-- Service -->
-				<?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+				<?php $__currentLoopData = $data['services']->result(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					
 						<div class="col-xl-4 col-md-6 service_col">
 							<div class="service text-center">
-								<a href="<?php echo e(base_url()); ?>index.php/services">
+								<a href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>">
 								<div class="service">
 									<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
 										<div class="icon"><img src="<?php echo e(asset_url()); ?>images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
 									</div>
-									<div class="service_title"><?php echo $key ?></div>
+									<div class="service_title"><?php echo $service->name ?></div>
 									
 								</div>
 								</a>
