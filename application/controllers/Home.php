@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // HomeController
 class Home extends CI_Controller {
 
+	public function schedule()
+	{
+		$data = array();
+		return view('schedule',['data'=>$data]);
+	}
 	public function index()
 	{
 		$this->load->helper('curl');
@@ -20,4 +25,5 @@ class Home extends CI_Controller {
 		);
 		return view('index',['data'=>$data]);
 	}
+
 }

@@ -9,15 +9,14 @@
       <div class="col-lg-3" style="padding-top: 120px">
         <div class="list-group">
           @foreach ($data['services']->result() as $element)
-            <a href="{{base_url().'index.php/services/show/'.$element->id }}" class="list-group-item">{{$element->name}}</a>
+            <a href="{{base_url().'index.php/services/show/'.$element->id.'#title' }}" class="list-group-item">{{$element->name}}</a>
           @endforeach 
         </div>
 
       </div>
       <!-- /.col-lg-3 -->
-
-      <div class="col-lg-8">
-        <h2 class="my-4">{{$data['service']->name}}</h2>
+      <div class="col-lg-8" id="title">
+        <h2 class="my-4" >{{$data['service']->name}}</h2>
 
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
