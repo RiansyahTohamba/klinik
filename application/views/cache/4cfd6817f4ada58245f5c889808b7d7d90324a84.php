@@ -46,9 +46,9 @@
 			<!-- Main Navigation -->
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active" id=""><a href="<?php echo e(base_url()); ?>">Beranda</a></li>
-					<li><a href="<?php echo e(base_url()); ?>#our_services">| Jadwal</a></li>
-					<li><a href="<?php echo e(base_url()); ?>#contact">| Kontak</a></li>
+					<li id=""><a href="<?php echo e(base_url()); ?>"><u>Beranda</u></a></li>
+					<li><a href="<?php echo e(base_url().'index.php/home/schedule'); ?>"><u>Jadwal</u></a></li>
+					<li><a href="<?php echo e(base_url()); ?>#contact"> <u>Kontak</u></a></li>
 				</ul>
 			</nav>
 			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
