@@ -152,7 +152,7 @@
 				<div class="col text-center">
 					<div class="section_title_container">
 						
-						<div class="section_title"><h2>Pelayanan Kami</h2></div>
+						<div class="section_title"><h2>Info & Update</h2></div>
 						
 					</div>
 				</div>
@@ -164,12 +164,18 @@
 					
 						<div class="col-xl-4 col-md-6 service_col">
 							<div class="service text-center">
+								<img src="{{asset_url().'images/home_slider.jpg'}}" class="img-thumbnail" width="350" style="margin-left: 20px">
 								<a href="{{base_url().'index.php/services/show/'.$service->id }}">
 								<div class="service">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-										<div class="icon"><img src="{{ asset_url() }}images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
 									<div class="service_title"><?php echo $service->name ?></div>
+									<div class="service_text">
+										halo halo halo halo
+										halo halo halo halo
+										halo halo
+										halo halo
+										halo halo
+										halo halo
+									</div>
 									
 								</div>
 								</a>
