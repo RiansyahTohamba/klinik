@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 		foreach ($results['data'] as $photo){
 			$photos[]= $photo['images']['standard_resolution']['url'];
 		}
-		$services = $this->db->query("SELECT * FROM services");
+		$services = $this->db->query("SELECT * FROM services LIMIT 3");
 		$data = array(
 			'photos' => $photos,
 			'services' => $services,

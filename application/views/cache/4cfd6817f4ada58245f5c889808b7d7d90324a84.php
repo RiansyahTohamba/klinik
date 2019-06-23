@@ -13,9 +13,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>styles/responsive.css">
 
-<script src="<?php echo e(asset_url()); ?>js/jquery-3.2.1.min.js"></script>
-<script src="<?php echo e(asset_url()); ?>styles/bootstrap-4.1.2/popper.js"></script>
-<script src="<?php echo e(asset_url()); ?>styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+
 <script src="<?php echo e(asset_url()); ?>plugins/greensock/TweenMax.min.js"></script>
 <script src="<?php echo e(asset_url()); ?>plugins/greensock/TimelineMax.min.js"></script>
 <script src="<?php echo e(asset_url()); ?>plugins/scrollmagic/ScrollMagic.min.js"></script>
@@ -24,6 +27,8 @@
 
 <script src="<?php echo e(asset_url()); ?>plugins/jquery-datepicker/jquery-ui.js"></script>
 <script src="<?php echo e(asset_url()); ?>js/custom.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
 
 </head>
 <body>
@@ -46,8 +51,22 @@
 			<!-- Main Navigation -->
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li id=""><a href="<?php echo e(base_url()); ?>"><u>Beranda</u></a></li>
-					<li><a href="<?php echo e(base_url().'index.php/home/schedule'); ?>"><u>Jadwal</u></a></li>
+					<li><a href="<?php echo e(base_url()); ?>"><u>Beranda</u></a></li>
+					<li>
+					  <a class="dropdown-toggle" href="#" role="button" id="LinkDropdownDemo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <u>Layanan</u>
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="LinkDropdownDemo">
+					  	<?php
+					  		$CI =& get_instance();
+							$services = $CI->db->query("SELECT * FROM services LIMIT 3")->result(); 
+					  	?>
+					  	<?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+						    <a class="dropdown-item" href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>"><?php echo e($service->name); ?></a>
+					  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+					    <a class="dropdown-item" href="<?php echo e(base_url().'index.php/services/show/1'); ?>">>> Lainnya</a>
+					  </div>
+					</li>
 					<li><a href="<?php echo e(base_url()); ?>#contact"> <u>Kontak</u></a></li>
 				</ul>
 			</nav>
@@ -56,17 +75,13 @@
 				<!-- Work Hourse -->
 				<div class="work_hours">Senin - Minggu: 8:00  - 22:00 </div>
 
-
-				<!-- Appointment Button -->
-				<div class="button button_1 header_button"><a href="<?php echo e(base_url()); ?>#our_services">Layanan Kami</a></div>
-
+				
 				<!-- Header Social -->
 				<div class="social header_social">
 					<ul class="d-flex flex-row align-items-center justify-content-start">
 						<li><a href="https://www.instagram.com/klinikpuriintan/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						<li><a href="https://web.facebook.com/KlinikPuriIntan/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="https://twitter.com/klinikpuriintan"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="<?php echo e(base_url()); ?>#contact"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -158,9 +173,11 @@
 	</footer>
 </div>
 
+<a href="https://api.whatsapp.com/send?phone=6281945110773&text=Halo%20Admin" class="float_whatsapp" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

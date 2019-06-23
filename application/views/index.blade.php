@@ -41,7 +41,7 @@
 												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
 											</div>
 											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div class="button button_1 trans_200"><a href="{{base_url()}}#our_services">Layanan Kami</a></div>
+												<div class="button button_1 trans_200"><a href="{{base_url().'index.php/services/show/1' }}">Layanan Kami</a></div>
 											</div>
 										</div>
 									</div>
@@ -150,11 +150,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_title_container">
-						
-						<div class="section_title"><h2>Info & Update</h2></div>
-						
-					</div>
+					<div class="section_title"><h2>Info & Update</h2></div>
 				</div>
 			</div>
 			<div class="row services_row">
@@ -163,23 +159,13 @@
 				@foreach ($data['services']->result() as $service)
 					
 						<div class="col-xl-4 col-md-6 service_col">
-							<div class="service text-center">
-								<img src="{{asset_url().'images/home_slider.jpg'}}" class="img-thumbnail" width="350" style="margin-left: 20px">
-								<a href="{{base_url().'index.php/services/show/'.$service->id }}">
-								<div class="service">
-									<div class="service_title"><?php echo $service->name ?></div>
-									<div class="service_text">
-										halo halo halo halo
-										halo halo halo halo
-										halo halo
-										halo halo
-										halo halo
-										halo halo
-									</div>
-									
-								</div>
-								</a>
-							</div>
+							<a href="{{base_url().'index.php/services/show/'.$service->id }}">
+								<figure>
+							        <img src="{{asset_url().'images/home_slider.jpg'}}" 
+							        height="200px" width="300px"  style="margin-left: 20px">
+							        <figcaption>Third example caption</figcaption>
+							    </figure>
+							</a>	
 						</div>	
 				@endforeach
 				

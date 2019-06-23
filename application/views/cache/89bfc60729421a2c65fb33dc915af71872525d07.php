@@ -39,7 +39,7 @@
 												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
 											</div>
 											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div class="button button_1 trans_200"><a href="<?php echo e(base_url()); ?>#our_services">Layanan Kami</a></div>
+												<div class="button button_1 trans_200"><a href="<?php echo e(base_url().'index.php/services/show/1'); ?>">Layanan Kami</a></div>
 											</div>
 										</div>
 									</div>
@@ -148,11 +148,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_title_container">
-						
-						<div class="section_title"><h2>Pelayanan Kami</h2></div>
-						
-					</div>
+					<div class="section_title"><h2>Info & Update</h2></div>
 				</div>
 			</div>
 			<div class="row services_row">
@@ -161,17 +157,13 @@
 				<?php $__currentLoopData = $data['services']->result(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					
 						<div class="col-xl-4 col-md-6 service_col">
-							<div class="service text-center">
-								<a href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>">
-								<div class="service">
-									<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
-										<div class="icon"><img src="<?php echo e(asset_url()); ?>images/icon_3.svg" alt="https://www.flaticon.com/authors/prosymbols"></div>
-									</div>
-									<div class="service_title"><?php echo $service->name ?></div>
-									
-								</div>
-								</a>
-							</div>
+							<a href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>">
+								<figure>
+							        <img src="<?php echo e(asset_url().'images/home_slider.jpg'); ?>" 
+							        height="200px" width="300px"  style="margin-left: 20px">
+							        <figcaption>Third example caption</figcaption>
+							    </figure>
+							</a>	
 						</div>	
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 				
@@ -200,15 +192,23 @@
 	</div>
 
 	<!-- Article -->
+		<div id="our_services" class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<iframe width="100%" height="600" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+				</div>
+			</div>
+		</div>
+		</div>
+
 
 	<div id="our_services" class="services">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_title_container">
 						
-						<div class ="section_title"><h2>Update Terkini</h2></div>
-					</div>
+					<div class ="section_title"><h2><a href="https://www.instagram.com/klinikpuriintan/"><i class="fa fa-instagram" aria-hidden="true"></i> @klinikpuriintan</h2></a></div>
 					<div class="row services_row">
 						<div class="ig-thumbnail">
 							<?php $__currentLoopData = $data['photos']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $photo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
