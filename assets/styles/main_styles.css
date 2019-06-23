@@ -45,7 +45,6 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
 }
 div
 {
@@ -181,7 +180,6 @@ section
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.7);
-    text-align: center;
     color: #fff; 
     padding: 10px;
 }
@@ -1222,6 +1220,7 @@ section
 	display: block;
 	position: relative;
 	background: #26292d;
+	color :#878787;
 }
 .footer_content
 {

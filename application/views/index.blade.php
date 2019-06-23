@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset_url() }}plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="{{ asset_url() }}plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="{{ asset_url() }}plugins/OwlCarousel2-2.2.1/animate.css">
-    <link href="{{ asset_url() }}styles/google_map.css" rel='stylesheet' type='text/css'>
 
 	<script src="{{ asset_url() }}plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 	
@@ -156,14 +155,17 @@
 			<div class="row services_row">
 				
 				<!-- Service -->
-				@foreach ($data['services']->result() as $service)
+				@foreach ($data['informations']->result() as $information)
 					
 						<div class="col-xl-4 col-md-6 service_col">
-							<a href="{{base_url().'index.php/services/show/'.$service->id }}">
+							<a href="{{base_url().'index.php/information/show/'.$information->id }}">
 								<figure>
-							        <img src="{{asset_url().'images/home_slider.jpg'}}" 
+							        <img src="{{asset_url().'images/'.$information->photo}}" 
 							        height="200px" width="300px"  style="margin-left: 20px">
-							        <figcaption>Third example caption</figcaption>
+							        <figcaption>
+							        	<b>{{$information->title}}</b>
+							        	<small>{{date("Y/m/d")}}</small>
+							        </figcaption>
 							    </figure>
 							</a>	
 						</div>	

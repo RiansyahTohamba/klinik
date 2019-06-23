@@ -3,7 +3,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/animate.css">
-    <link href="<?php echo e(asset_url()); ?>styles/google_map.css" rel='stylesheet' type='text/css'>
 
 	<script src="<?php echo e(asset_url()); ?>plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 	
@@ -154,14 +153,17 @@
 			<div class="row services_row">
 				
 				<!-- Service -->
-				<?php $__currentLoopData = $data['services']->result(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+				<?php $__currentLoopData = $data['informations']->result(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $information): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					
 						<div class="col-xl-4 col-md-6 service_col">
-							<a href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>">
+							<a href="<?php echo e(base_url().'index.php/information/show/'.$information->id); ?>">
 								<figure>
-							        <img src="<?php echo e(asset_url().'images/home_slider.jpg'); ?>" 
+							        <img src="<?php echo e(asset_url().'images/'.$information->photo); ?>" 
 							        height="200px" width="300px"  style="margin-left: 20px">
-							        <figcaption>Third example caption</figcaption>
+							        <figcaption>
+							        	<b><?php echo e($information->title); ?></b>
+							        	<small><?php echo e(date("Y/m/d")); ?></small>
+							        </figcaption>
 							    </figure>
 							</a>	
 						</div>	
