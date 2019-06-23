@@ -208,15 +208,23 @@
 	</div>
 
 	<!-- Article -->
+		<div id="our_services" class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<iframe width="100%" height="600" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+				</div>
+			</div>
+		</div>
+		</div>
+
 
 	<div id="our_services" class="services">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_title_container">
 						
-						<div class ="section_title"><h2>Update Terkini</h2></div>
-					</div>
+					<div class ="section_title"><h2><a href="https://www.instagram.com/klinikpuriintan/"><i class="fa fa-instagram" aria-hidden="true"></i> @klinikpuriintan</h2></a></div>
 					<div class="row services_row">
 						<div class="ig-thumbnail">
 							@foreach ($data['photos'] as $photo)
