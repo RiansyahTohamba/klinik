@@ -1,0 +1,10 @@
+catatan :
+1. float whatsup
+2. api youtube klinik terkini (dinamis)
+3. space buat artikel (lihat contoh detik) 
+4. 'pelayanan kami' diganti ke dropdown
+
+belum
+
+5. slide skalanya disesuaikan, fotonya bukan dicrop (desc text hilang, cuman judul besar saja)
+6. slide jadwal dokter 
