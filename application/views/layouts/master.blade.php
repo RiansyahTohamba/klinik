@@ -158,6 +158,9 @@
 	</footer>
 </div>
 
+<a href="https://api.whatsapp.com/send?phone=6281945110773&text=Halo%20Admin" class="float_whatsapp" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
