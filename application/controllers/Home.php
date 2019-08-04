@@ -15,11 +15,7 @@ class Home extends CI_Controller {
 		$accessToken = '7486871755.1677ed0.6acb05b6f26646349e3658b0efdf5921';
 		$results = get_CURL("https://api.instagram.com/v1/users/self/media/recent/?access_token=$accessToken&count=3");
 		$photos = [];
-		$slides = array(
-					'web_banner_1.jpg'=> '',
-					'front_office.jpeg'=> '',
-					'blog_1.jpg'=> ''
-				);
+		
 		foreach ($results['data'] as $photo){
 			$photos[]= $photo['images']['standard_resolution']['url'];
 		}

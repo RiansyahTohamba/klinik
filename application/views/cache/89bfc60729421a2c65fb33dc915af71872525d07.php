@@ -16,12 +16,14 @@
 				
 				<!-- Slide -->
 				<?php 
+				
 				$slides = array(
-					'home_slider.jpg'=> '',
-					'front_office.jpeg'=> '',
-					'blog_1.jpg'=> ''
+					'web_banner_1.jpg'=> '',
+					'web_banner_2.jpg'=> '',
+					'web_banner_3.jpg'=> '',
+					'web_banner_4.jpg'=> '',
+					'web_banner_5.jpg'=> '',
 				);
-
 				foreach ($slides as $key => $value) {
 					
 					?>
@@ -31,16 +33,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col">
-										<div class="home_content">
-											<div class="home_subtitle">#1 Klinik Terbaik </div>
-											<div class="home_title">Kesehatan anda prioritas kami</div>
-											<div class="home_text">
-												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
-											</div>
-											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div id="our_services_btn" class="button button_1 trans_200"><a href="<?php echo e(base_url().'index.php/services/show/1'); ?>">Layanan Kami</a></div>
-											</div>
-										</div>
+
 									</div>
 								</div>
 							</div>
@@ -61,16 +54,7 @@
 
 		</div>
 	</div>
-	<!-- Call to action -->
-	<div class="visi_responsive">
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<p>"Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang"</p>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<div  class="cta">
 		<div class="container">
 			<div class="row">
@@ -80,11 +64,15 @@
 						
 						<div class="cta_content">
 							<div class="cta_title">Hubungi Kami</div>
-							<div class="cta_text">Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
-				</div>
+							<div class="cta_text">
+								Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
+							</div>
+							<p>Telp : (021) 8269 3888 
+								<br>
+								Fax : (021) 8269 3868
+							</p>
+							<p></p>
 						</div>
-						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
-						<div class="cta_phone ml-lg-auto" id="no_whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i> +62 81945 110 773</div>
 					</div>
 				</div>
 			</div>
@@ -105,22 +93,22 @@
 							<div id="carouselExampleControls" class="carousel slide slide_doctors" data-ride="carousel">
 							  <div class="carousel-inner ">
 							    <div class="carousel-item active">
-							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_1.png'); ?>" height='400px' alt="First slide">
+							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_1.png'); ?>"  alt="First slide">
 							    </div>
 							    <div class="carousel-item">
-							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_2.png'); ?>" height='400px' alt="Second slide">
-							    </div>
-
-							    <div class="carousel-item">
-							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_3.png'); ?>" height='400px' alt="Third slide">
+							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_2.png'); ?>"  alt="Second slide">
 							    </div>
 
 							    <div class="carousel-item">
-							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_4.png'); ?>" height='400px' alt="Third slide">
+							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_3.png'); ?>"  alt="Third slide">
 							    </div>
 
 							    <div class="carousel-item">
-							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_5.png'); ?>" height='400px' alt="Third slide">
+							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_4.png'); ?>"  alt="Third slide">
+							    </div>
+
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="<?php echo e(asset_url().'images/doctor_5.png'); ?>"  alt="Third slide">
 							    </div>
 
 
