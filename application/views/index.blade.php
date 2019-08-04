@@ -18,11 +18,7 @@
 				
 				<!-- Slide -->
 				<?php 
-				$slides = array(
-					'home_slider.jpg'=> '',
-					'front_office.jpeg'=> '',
-					'blog_1.jpg'=> ''
-				);
+				
 
 				foreach ($slides as $key => $value) {
 					
@@ -40,7 +36,7 @@
 												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
 											</div>
 											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div class="button button_1 trans_200"><a href="{{base_url().'index.php/services/show/1' }}">Layanan Kami</a></div>
+												<div id="our_services_btn" class="button button_1 trans_200"><a href="{{base_url().'index.php/services/show/1' }}">Layanan Kami</a></div>
 											</div>
 										</div>
 									</div>
@@ -64,24 +60,84 @@
 		</div>
 	</div>
 	<!-- Call to action -->
-
+	<div class="visi_responsive">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<p>"Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div  class="cta">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+						</div>
+						
 						<div class="cta_content">
 							<div class="cta_title">Hubungi Kami</div>
 							<div class="cta_text">Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
 				</div>
 						</div>
 						<div class="cta_phone ml-lg-auto">(021) 8269 3888</div>
-						<div class="cta_phone ml-lg-auto"><i class="fa fa-whatsapp" aria-hidden="true"></i> +62 81945 110 773</div>
+						<div class="cta_phone ml-lg-auto" id="no_whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i> +62 81945 110 773</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+				<!-- Doctor Schedules -->
+				
+				<div class="doctors_container">
+					<div class="container">
+						<div class="row">
+							<div class="col text-center">
+								<div class="section_title"><h2>Jadwal Dokter</h2></div>
+							</div>
+						</div>
+						<div class="row services_row d-flex justify-content-center">
+							<div id="carouselExampleControls" class="carousel slide slide_doctors" data-ride="carousel">
+							  <div class="carousel-inner ">
+							    <div class="carousel-item active">
+							      <img class="d-block w-100" src="{{asset_url().'images/doctor_1.png'}}" height='400px' alt="First slide">
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="{{asset_url().'images/doctor_2.png'}}" height='400px' alt="Second slide">
+							    </div>
+
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="{{asset_url().'images/doctor_3.png'}}" height='400px' alt="Third slide">
+							    </div>
+
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="{{asset_url().'images/doctor_4.png'}}" height='400px' alt="Third slide">
+							    </div>
+
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="{{asset_url().'images/doctor_5.png'}}" height='400px' alt="Third slide">
+							    </div>
+
+
+							  </div>
+							  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
 	<!-- Why Choose Us -->
 
 	<div class="why">

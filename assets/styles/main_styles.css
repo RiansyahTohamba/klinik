@@ -157,7 +157,28 @@ section
 	position: relative;
 	box-sizing: border-box;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+}
 
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
 .services_row a figure {
     float: left;
     clear: both;
@@ -183,14 +204,17 @@ section
     color: #fff; 
     padding: 10px;
 }
-
-
+.slide_doctors{
+	background-color: #111;
+	width: 300px;
+	margin-bottom: 40px;
+}
 .float_whatsapp{
 	position:fixed;
 	width:60px;
 	height:60px;
 	bottom:30px;
-	left:10px;
+	right:10px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
@@ -702,7 +726,7 @@ section
 	max-width: 550px;
 }
 .home_subtitle,.home_title,.home_text{
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color:rgba(0, 0, 0, 0.2);
 }
 .home_subtitle
 {
