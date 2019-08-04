@@ -29,16 +29,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col">
-										<div class="home_content">
-											<div class="home_subtitle">#1 Klinik Terbaik </div>
-											<div class="home_title">Kesehatan anda prioritas kami</div>
-											<div class="home_text">
-												<p>Layanan Fasilitas Kesehatan komprehensif, dengan sajian pelayanan yang Edukatif, Preventif dan Kuratif untuk Generasi Penerus Bangsa yang Gemilang</p>
-											</div>
-											<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-												<div id="our_services_btn" class="button button_1 trans_200"><a href="{{base_url().'index.php/services/show/1' }}">Layanan Kami</a></div>
-											</div>
-										</div>
+
 									</div>
 								</div>
 							</div>
@@ -69,7 +60,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div  class="cta">
 		<div class="container">
 			<div class="row">
