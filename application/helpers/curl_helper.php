@@ -9,6 +9,11 @@ if ( ! function_exists('get_CURL'))
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$result = curl_exec($curl);
 	  	return json_decode($result,true);
+		
+		// if($result !== false) {
+		// 	return '404';
+		// }else{
+		// }
 	}
 }
 

@@ -56,16 +56,39 @@
 					  <a class="dropdown-toggle" href="#" role="button" id="LinkDropdownDemo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    <u>Layanan</u>
 					  </a>
-					  <div class="dropdown-menu" aria-labelledby="LinkDropdownDemo">
 					  	<?php
-					  		$CI =& get_instance();
-							$services = $CI->db->query("SELECT * FROM services LIMIT 3")->result(); 
+				  			$CI =& get_instance();
+							$services = $CI->db->query("SELECT * FROM services LIMIT 4")->result(); 
+							$support_services = $CI->db->query("SELECT * FROM services WHERE id > 4")->result(); 
 					  	?>
-					  	<?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-						    <a class="dropdown-item" href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>"><?php echo e($service->name); ?></a>
-					  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-					    <a class="dropdown-item" href="<?php echo e(base_url().'index.php/services/show/1'); ?>">>> Lainnya</a>
-					  </div>
+					  	<ul class="dropdown-menu" aria-labelledby="LinkDropdownDemo">
+					  		<?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+						    <li>
+						    	<a tabindex="-1" href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>"><?php echo e($service->name); ?></a>
+						    </li>
+						  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+					      
+					      <li class="dropdown-submenu">
+					        <a class="test" tabindex="-1" href="#">Layanan <br>Pendukung >> <span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					      		<?php $__currentLoopData = $support_services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+								    <li>
+								    	<a tabindex="-1" href="<?php echo e(base_url().'index.php/services/show/'.$service->id); ?>"><?php echo e($service->name); ?></a>
+								    </li>
+							  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  	
+					          
+					        </ul>
+					      </li>
+					    </ul>
+					  <script>
+						$(document).ready(function(){
+						   $('.dropdown-submenu a.test').on("click", function(e){
+						    $(this).next('ul').toggle();
+						    e.stopPropagation();
+						    e.preventDefault();
+						  });
+						});
+						</script>
 					</li>
 					<li><a href="<?php echo e(base_url()); ?>#contact"> <u>Kontak</u></a></li>
 				</ul>

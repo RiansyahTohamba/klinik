@@ -6,14 +6,7 @@
 
     <div class="row">
 
-      <div class="col-lg-3" style="padding-top: 120px">
-        <div class="list-group">
-          <?php $__currentLoopData = $data['services']->result(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <a href="<?php echo e(base_url().'index.php/services/show/'.$element->id.'#title'); ?>" class="list-group-item"><?php echo e($element->name); ?></a>
-          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
-        </div>
-
-      </div>
+      
       <!-- /.col-lg-3 -->
       <div class="col-lg-8" id="title">
         <h2 class="my-4" ><?php echo e($data['service']->name); ?></h2>

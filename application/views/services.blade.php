@@ -6,14 +6,14 @@
 
     <div class="row">
 
-      <div class="col-lg-3" style="padding-top: 120px">
+      {{-- <div class="col-lg-3" style="padding-top: 120px">
         <div class="list-group">
           @foreach ($data['services']->result() as $element)
             <a href="{{base_url().'index.php/services/show/'.$element->id.'#title' }}" class="list-group-item">{{$element->name}}</a>
           @endforeach 
         </div>
 
-      </div>
+      </div> --}}
       <!-- /.col-lg-3 -->
       <div class="col-lg-8" id="title">
         <h2 class="my-4" >{{$data['service']->name}}</h2>

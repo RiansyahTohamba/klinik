@@ -56,16 +56,39 @@
 					  <a class="dropdown-toggle" href="#" role="button" id="LinkDropdownDemo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    <u>Layanan</u>
 					  </a>
-					  <div class="dropdown-menu" aria-labelledby="LinkDropdownDemo">
 					  	<?php
-					  		$CI =& get_instance();
-							$services = $CI->db->query("SELECT * FROM services LIMIT 3")->result(); 
+				  			$CI =& get_instance();
+							$services = $CI->db->query("SELECT * FROM services LIMIT 4")->result(); 
+							$support_services = $CI->db->query("SELECT * FROM services WHERE id > 4")->result(); 
 					  	?>
-					  	@foreach ($services as $service)
-						    <a class="dropdown-item" href="{{base_url().'index.php/services/show/'.$service->id }}">{{$service->name}}</a>
-					  	@endforeach
-					    <a class="dropdown-item" href="{{base_url().'index.php/services/show/1' }}">>> Lainnya</a>
-					  </div>
+					  	<ul class="dropdown-menu" aria-labelledby="LinkDropdownDemo">
+					  		@foreach ($services as $service)
+						    <li>
+						    	<a tabindex="-1" href="{{base_url().'index.php/services/show/'.$service->id }}">{{$service->name}}</a>
+						    </li>
+						  	@endforeach
+					      
+					      <li class="dropdown-submenu">
+					        <a class="test" tabindex="-1" href="#">Layanan <br>Pendukung >> <span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					      		@foreach ($support_services as $service)
+								    <li>
+								    	<a tabindex="-1" href="{{base_url().'index.php/services/show/'.$service->id }}">{{$service->name}}</a>
+								    </li>
+							  	@endforeach  	
+					          
+					        </ul>
+					      </li>
+					    </ul>
+					  <script>
+						$(document).ready(function(){
+						   $('.dropdown-submenu a.test').on("click", function(e){
+						    $(this).next('ul').toggle();
+						    e.stopPropagation();
+						    e.preventDefault();
+						  });
+						});
+						</script>
 					</li>
 					<li><a href="{{base_url()}}#contact"> <u>Kontak</u></a></li>
 				</ul>

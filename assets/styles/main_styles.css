@@ -157,6 +157,16 @@ section
 	position: relative;
 	box-sizing: border-box;
 }
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 100;
+  margin-top: -1px;
+}
+
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -1022,6 +1032,13 @@ section
 8. CTA
 *********************************/
 
+.klinik_container
+{
+	width: 100%;
+	padding: 10px 0;
+	color: #716e6e;
+	
+}
 .cta
 {
 	width: 100%;
@@ -1066,10 +1083,7 @@ section
 	padding-top: 91px;
 	padding-bottom: 25px;
 }
-.services_row
-{
-	margin-top: 68px;
-}
+
 .service_col
 {
 	margin-bottom: 55px;
