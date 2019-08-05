@@ -102,7 +102,6 @@
 				    <div class="carousel-item">
 				      <img class="d-block w-100" src="{{asset_url().'images/why_us_2.jpg'}}"  alt="Second slide">
 				    </div>
-
 				    <div class="carousel-item">
 				      <img class="d-block w-100" src="{{asset_url().'images/why_us_3.jpg'}}"  alt="Third slide">
 				    </div>
@@ -182,7 +181,7 @@
 			<div class="row services_row">
 				
 				<!-- Service -->
-				@foreach ($data['informations']->result() as $information)
+				@foreach ($data['informations'] as $information)
 					
 						<div class="col-xl-4 col-md-6 service_col">
 							<a href="{{base_url().'index.php/information/show/'.$information->id }}">
@@ -227,8 +226,16 @@
 	<div class="klinik_container">
 		<div class="container">
 			<div class="row">
-				<div class="col text-center">
-					<iframe width="100%" height="600" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+				<div class="col">
+					<iframe width="100%" height="300" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<iframe width="100%" height="150" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+				</div>
+				<div class="col">
+					<iframe width="100%" height="150" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
 				</div>
 			</div>
 		</div>
@@ -239,15 +246,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
+
+					{{--  title --}}
 					<div class ="section_title">
 						<a href="https://www.instagram.com/klinikpuriintan/">
 							<img src="{{asset_url()}}/images/instagram.jpg" height="70px">
 					</a></div>
-					<div class="row services_row">
-						<div class="ig-thumbnail">
-							@foreach ($data['photos'] as $photo)
-								<a href="https://www.instagram.com/klinikpuriintan/"><img src="{{$photo}}" class="img-thumbnail" width="350" style="margin-left: 20px"> </a>
-							@endforeach
+
+					<div class="row">
+						<div class="ig-thumbnail col">
+							<a href="https://www.instagram.com/klinikpuriintan/"><img src="{{$data['photos'][0]}}" class="img-thumbnail" width="300" style="margin-left: 20px"> </a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="ig-thumbnail col">
+							<a href="https://www.instagram.com/klinikpuriintan/"><img src="{{$data['photos'][1]}}" class="img-thumbnail" width="300" style="margin-left: 20px"> </a>
+						</div>
+						<div class="ig-thumbnail col">
+							<a href="https://www.instagram.com/klinikpuriintan/"><img src="{{$data['photos'][2]}}" class="img-thumbnail" width="300"> </a>
 						</div>
 					</div>
 				</div>

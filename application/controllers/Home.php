@@ -24,7 +24,7 @@ class Home extends CI_Controller {
 		$informations = $this->db->query("SELECT * FROM informations LIMIT 3");
 		$data = array(
 			'photos' => $this->get_instagram_photos(),
-			'informations' => $informations,
+			'informations' => $informations->result(),
 		);
 		return view('index',['data'=>$data]);
 	}
