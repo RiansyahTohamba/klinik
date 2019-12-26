@@ -66,7 +66,7 @@
 							<div class="section_title text-center">
 								<h4>Hubungi Kami</h4>
 							</div>
-							<div class="cta_text">
+							<div>
 								Jl KH Agus Salim (Tugu) No 35, Bekasi Timur, Jawa Barat
 							</div>
 							<p>Telp : (021) 8269 3888 
@@ -176,12 +176,11 @@
 					<div class="section_title"><h4>Info & Update</h4></div>
 				</div>
 			</div>
-			<div class="row services_row">
+			<div class="row news">
 				
 				<!-- Service -->
 				<?php $__currentLoopData = $data['informations']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $information): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-					
-						<div class="col-xl-4 col-md-6 service_col">
+						<div class="col-md-6">
 							<a href="<?php echo e(base_url().'index.php/information/show/'.$information->id); ?>">
 								<figure>
 							        <img src="<?php echo e(asset_url().'images/'.$information->photo); ?>" 
@@ -225,15 +224,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<iframe width="100%" height="300" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+					<iframe width="100%" height="300" src="https://www.youtube.com/embed/D4EtlrcjZlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<iframe width="100%" height="150" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+					<iframe width="100%" height="150" src="https://www.youtube.com/embed/D4EtlrcjZlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
 				</div>
 				<div class="col">
-					<iframe width="100%" height="150" src="https://www.youtube.com/embed/KjPzPKNbsxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
+					<iframe width="100%" height="150" src="https://www.youtube.com/embed/D4EtlrcjZlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
 				</div>
 			</div>
 		</div>
@@ -250,7 +249,6 @@
 						<a href="https://www.instagram.com/klinikpuriintan/">
 							<img src="<?php echo e(asset_url()); ?>/images/instagram.jpg" height="70px">
 					</a></div>
-
 					<div class="row">
 						<div class="ig-thumbnail col">
 							<a href="https://www.instagram.com/klinikpuriintan/"><img src="<?php echo e($data['photos'][0]); ?>" class="img-thumbnail" width="300" style="margin-left: 20px"> </a>
@@ -258,10 +256,10 @@
 					</div>
 					<div class="row">
 						<div class="ig-thumbnail col">
-							<a href="https://www.instagram.com/klinikpuriintan/"><img src="<?php echo e($data['photos'][1]); ?>" class="img-thumbnail" width="300" style="margin-left: 20px"> </a>
+							<a href="https://www.instagram.com/klinikpuriintan/"><img src="<?php echo e($data['photos'][1]); ?>" class="img-thumbnail" style="margin-left: 20px"> </a>
 						</div>
 						<div class="ig-thumbnail col">
-							<a href="https://www.instagram.com/klinikpuriintan/"><img src="<?php echo e($data['photos'][2]); ?>" class="img-thumbnail" width="300"> </a>
+							<a href="https://www.instagram.com/klinikpuriintan/"><img src="<?php echo e($data['photos'][2]); ?>" class="img-thumbnail" > </a>
 						</div>
 					</div>
 				</div>

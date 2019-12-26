@@ -189,7 +189,7 @@ section
   font-size: 55px;
   color: red;
 }
-.services_row a figure {
+.news a figure {
     float: left;
     clear: both;
     
@@ -201,11 +201,11 @@ section
     font-size: 15px;
 }
 
-.services_row a figure img {
+.news a figure img {
     vertical-align: bottom;
 }
 
-.services_row a figure figcaption {
+.news a figure figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
